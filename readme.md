@@ -3,8 +3,8 @@ US Airport to 5 Nearest NOAA Weather Stations [Web App](https://uge-airport-noaa
 Robert Duc Bui
 2022-07-18
 
-![Example:
-ORD](https://github.com/robert-mdh-bui/uge-airport-noaa-lookup/blob/main/assets/ORD_screenshot.png?raw=true)
+[![Example:
+ORD](https://github.com/robert-mdh-bui/uge-airport-noaa-lookup/blob/main/assets/ORD_screenshot.png?raw=true)](https://uge-airport-noaa-lookup.herokuapp.com/)
 
 # Prerequisites
 
