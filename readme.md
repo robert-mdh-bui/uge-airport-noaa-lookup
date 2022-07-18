@@ -280,3 +280,6 @@ repository:
 
 The deployed application can be found at
 <https://uge-airport-noaa-lookup.herokuapp.com/>.
+
+# License
+[GNU General Public License 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
