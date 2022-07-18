@@ -15,7 +15,7 @@ app.layout = html.Div(
         html.Iframe(
             id="my-output",
             src="assets/ORD.html",
-            style={'height': '495px',
+            style={'height': '900px',
                    'width': '100%'}
         ),
         dcc.Input(
