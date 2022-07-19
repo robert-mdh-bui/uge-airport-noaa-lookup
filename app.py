@@ -33,6 +33,14 @@ app.layout = html.Div(
             children='''
             This web app is derived from a project originally created for [United Ground Express](https://unitedgroundexpress.com/) \
             operations planning.
+            ''',
+            style={
+                'display': 'flex',
+                'justifyContent': 'center'
+            }
+        ),
+        dcc.Markdown(
+            children='''
             Data sources consist of publicly available information from [IATA](https://www.iata.org/en/publications/directories/code-search/)\
             and [NOAA](https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily).
             ''',
@@ -96,6 +104,15 @@ app.layout = html.Div(
                         )
                     ]
                 ),
+                dcc.Markdown(
+                    children='''
+                    No information proprietary to United Airlines, United Ground Express, or affiliates has been used in this app.
+                    ''',
+                    style={
+                        'display': 'flex',
+                        'justifyContent': 'center'
+                    }
+                )
             ]
         )
     ]
