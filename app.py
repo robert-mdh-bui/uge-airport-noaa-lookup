@@ -18,11 +18,15 @@ app.layout = html.Div(
             style={'height': '900px',
                    'width': '100%'}
         ),
-        dcc.Input(
+        children=[dcc.Input(
             id='textinput',
             placeholder='Enter 3-letter IATA code',
             type='text',
             value='ORD'
+        )],
+        style=dict(
+            display='flex',
+            justifyContent='center'
         )
     ]
 )
