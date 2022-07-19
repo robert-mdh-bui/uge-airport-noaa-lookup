@@ -14,7 +14,7 @@ app.layout = html.Div(
     [
 
         html.H2(
-            children="Web App: Mapping 5 nearest NOAA weather stations to US airports",
+            children="Web App: Mapping US Airports Monthly Low Temps with NOAA Stations",
             style={
                 'textAlign': 'center',
                 'font_family': 'SourceSansProSemiBold'
@@ -32,7 +32,7 @@ app.layout = html.Div(
         dcc.Markdown(
             children='''
             This web app is derived from a project originally created for [United Ground Express](https://unitedgroundexpress.com/) \
-            operations planning.
+            winter operations planning.
             ''',
             style={
                 'display': 'flex',
