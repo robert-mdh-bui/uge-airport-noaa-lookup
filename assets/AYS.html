@@ -1,25 +1,14 @@
 <!DOCTYPE html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-
-    <script>
-        L_NO_TOUCH = false;
-        L_DISABLE_3D = false;
-    </script>
-
-    <style>html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }</style>
-    <style>#map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-    }</style>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -28,230 +17,211 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-
-    <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <style>
-        #map_b92ab63bd27adfbcbd305ee41d0d5945 {
-            position: relative;
-            width: 100.0%;
-            height: 100.0%;
-            left: 0.0%;
-            top: 0.0%;
-        }
-    </style>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1466267075f8f8959568e3e451a0e740 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
 </head>
-<body>
-
-<div class="folium-map" id="map_b92ab63bd27adfbcbd305ee41d0d5945"></div>
-
+<body>    
+    
+            <div class="folium-map" id="map_1466267075f8f8959568e3e451a0e740" ></div>
+        
 </body>
-<script>
-
-    var map_b92ab63bd27adfbcbd305ee41d0d5945 = L.map(
-        "map_b92ab63bd27adfbcbd305ee41d0d5945",
-        {
-            center: [31.2490997314, -82.3955001831],
-            crs: L.CRS.EPSG3857,
-            zoom: 10,
-            zoomControl: true,
-            preferCanvas: false,
-        }
-    );
-    L.control.scale().addTo(map_b92ab63bd27adfbcbd305ee41d0d5945);
-
-
-    var tile_layer_fd90cd194d01e8ab8552cb720f56fbbc = L.tileLayer(
-        "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
-        {
-            "attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.",
-            "detectRetina": false,
-            "maxNativeZoom": 18,
-            "maxZoom": 18,
-            "minZoom": 0,
-            "noWrap": false,
-            "opacity": 1,
-            "subdomains": "abc",
-            "tms": false
-        }
-    ).addTo(map_b92ab63bd27adfbcbd305ee41d0d5945);
-
-
-    var marker_c063d87dafce5c8dca72db1e8358765d = L.marker(
-        [31.2490997314, -82.3955001831],
-        {}
-    ).addTo(map_b92ab63bd27adfbcbd305ee41d0d5945);
-
-
-    var icon_647af8ed735b2cafd20da0476641c020 = L.AwesomeMarkers.icon(
-        {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
-    );
-    marker_c063d87dafce5c8dca72db1e8358765d.setIcon(icon_647af8ed735b2cafd20da0476641c020);
-
-
-    var popup_192a46f9633ac01b2517463539daacff = L.popup({"maxWidth": "100%"});
-
-
-    var html_81cf557908a672ead7aa5ee15ffd6051 = $(`<div id="html_81cf557908a672ead7aa5ee15ffd6051" style="width: 100.0%; height: 100.0%;">AYS</div>`)[0];
-    popup_192a46f9633ac01b2517463539daacff.setContent(html_81cf557908a672ead7aa5ee15ffd6051);
-
-
-    marker_c063d87dafce5c8dca72db1e8358765d.bindPopup(popup_192a46f9633ac01b2517463539daacff)
-    ;
-
-
-    var marker_df1e3a3fea04ca80d145f883be1f5e61 = L.marker(
-        [31.5358, -82.5067],
-        {}
-    ).addTo(map_b92ab63bd27adfbcbd305ee41d0d5945);
-
-
-    var icon_e958f789006ae3be69d28bd52e76d00e = L.AwesomeMarkers.icon(
-        {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-    );
-    marker_df1e3a3fea04ca80d145f883be1f5e61.setIcon(icon_e958f789006ae3be69d28bd52e76d00e);
-
-
-    var popup_c8727f26a26bfccc340eeffe5641950f = L.popup({"maxWidth": "100%"});
-
-
-    var html_e7818ec70b84b0b09c1629f9df2943dd = $(`<div id="html_e7818ec70b84b0b09c1629f9df2943dd" style="width: 100.0%; height: 100.0%;">USW00013870 ALMA BACON CO AP 20.866584641865394</div>`)[0];
-    popup_c8727f26a26bfccc340eeffe5641950f.setContent(html_e7818ec70b84b0b09c1629f9df2943dd);
-
-
-    marker_df1e3a3fea04ca80d145f883be1f5e61.bindPopup(popup_c8727f26a26bfccc340eeffe5641950f)
-    ;
-
-
-    var marker_7314c6d86edb48b422858ce59f23b52c = L.marker(
-        [31.2739, -81.9197],
-        {}
-    ).addTo(map_b92ab63bd27adfbcbd305ee41d0d5945);
-
-
-    var icon_407d65b77e2d402d7db253376a98e57c = L.AwesomeMarkers.icon(
-        {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-    );
-    marker_7314c6d86edb48b422858ce59f23b52c.setIcon(icon_407d65b77e2d402d7db253376a98e57c);
-
-
-    var popup_57a83e4afdc08d1d63a9805f7e2a3d08 = L.popup({"maxWidth": "100%"});
-
-
-    var html_828dc9463608e213291025c832caddf2 = $(`<div id="html_828dc9463608e213291025c832caddf2" style="width: 100.0%; height: 100.0%;">USC00096219 NAHUNTA 6NE 28.153687084146977</div>`)[0];
-    popup_57a83e4afdc08d1d63a9805f7e2a3d08.setContent(html_828dc9463608e213291025c832caddf2);
-
-
-    marker_7314c6d86edb48b422858ce59f23b52c.bindPopup(popup_57a83e4afdc08d1d63a9805f7e2a3d08)
-    ;
-
-
-    var marker_0d1157a8d4a064056489f879ccc61240 = L.marker(
-        [30.8264, -82.3606],
-        {}
-    ).addTo(map_b92ab63bd27adfbcbd305ee41d0d5945);
-
-
-    var icon_be10f290be17bd815e977707d62d3a48 = L.AwesomeMarkers.icon(
-        {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-    );
-    marker_0d1157a8d4a064056489f879ccc61240.setIcon(icon_be10f290be17bd815e977707d62d3a48);
-
-
-    var popup_770d0a812316c474820d1cb4a2d3bdc8 = L.popup({"maxWidth": "100%"});
-
-
-    var html_680ebd1ccee1e01a4f49435eaf71eb1f = $(`<div id="html_680ebd1ccee1e01a4f49435eaf71eb1f" style="width: 100.0%; height: 100.0%;">USC00093325 FARGO 17 NE 29.278761123808085</div>`)[0];
-    popup_770d0a812316c474820d1cb4a2d3bdc8.setContent(html_680ebd1ccee1e01a4f49435eaf71eb1f);
-
-
-    marker_0d1157a8d4a064056489f879ccc61240.bindPopup(popup_770d0a812316c474820d1cb4a2d3bdc8)
-    ;
-
-
-    var marker_8943a70a50ee2b462967770bd8eb9eab = L.marker(
-        [30.74, -82.1278],
-        {}
-    ).addTo(map_b92ab63bd27adfbcbd305ee41d0d5945);
-
-
-    var icon_a26c1c95ff4e895d94a9106e9ac4a2b6 = L.AwesomeMarkers.icon(
-        {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-    );
-    marker_8943a70a50ee2b462967770bd8eb9eab.setIcon(icon_a26c1c95ff4e895d94a9106e9ac4a2b6);
-
-
-    var popup_d90448afc8d32ad7276f47be420d37dc = L.popup({"maxWidth": "100%"});
-
-
-    var html_add4b45f6de8b15a9844f8ff449647d8 = $(`<div id="html_add4b45f6de8b15a9844f8ff449647d8" style="width: 100.0%; height: 100.0%;">USC00093465 FOLKSTON 9 SW 38.583677348211516</div>`)[0];
-    popup_d90448afc8d32ad7276f47be420d37dc.setContent(html_add4b45f6de8b15a9844f8ff449647d8);
-
-
-    marker_8943a70a50ee2b462967770bd8eb9eab.bindPopup(popup_d90448afc8d32ad7276f47be420d37dc)
-    ;
-
-
-    var marker_f20a4ff7671693893a29ddca130976cf = L.marker(
-        [31.8414, -82.3756],
-        {}
-    ).addTo(map_b92ab63bd27adfbcbd305ee41d0d5945);
-
-
-    var icon_4e29fa08f9c6e14ca3065ccd2b28da15 = L.AwesomeMarkers.icon(
-        {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-    );
-    marker_f20a4ff7671693893a29ddca130976cf.setIcon(icon_4e29fa08f9c6e14ca3065ccd2b28da15);
-
-
-    var popup_49b877252dff670af6d93380d341d9ac = L.popup({"maxWidth": "100%"});
-
-
-    var html_38bd4c1b145ec3b23b9b8e964d4b95d5 = $(`<div id="html_38bd4c1b145ec3b23b9b8e964d4b95d5" style="width: 100.0%; height: 100.0%;">USC00090670 BAXLEY 5NNW 40.94082325328616</div>`)[0];
-    popup_49b877252dff670af6d93380d341d9ac.setContent(html_38bd4c1b145ec3b23b9b8e964d4b95d5);
-
-
-    marker_f20a4ff7671693893a29ddca130976cf.bindPopup(popup_49b877252dff670af6d93380d341d9ac)
-    ;
-
-
-    var tile_layer_bd21ba81c45f74e966af2a8f8ac931ff = L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-            "attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.",
-            "detectRetina": false,
-            "maxNativeZoom": 18,
-            "maxZoom": 18,
-            "minZoom": 0,
-            "noWrap": false,
-            "opacity": 1,
-            "subdomains": "abc",
-            "tms": false
-        }
-    );
-    var mini_map_36661c433eed75a8758ae261f6600e5b = new L.Control.MiniMap(
-        tile_layer_bd21ba81c45f74e966af2a8f8ac931ff,
-        {
-            "autoToggleDisplay": false,
-            "centerFixed": false,
-            "collapsedHeight": 25,
-            "collapsedWidth": 25,
-            "height": 150,
-            "minimized": false,
-            "position": "bottomright",
-            "toggleDisplay": false,
-            "width": 150,
-            "zoomAnimation": false,
-            "zoomLevelOffset": -5
-        }
-    );
-    map_b92ab63bd27adfbcbd305ee41d0d5945.addControl(mini_map_36661c433eed75a8758ae261f6600e5b);
-
+<script>    
+    
+            var map_1466267075f8f8959568e3e451a0e740 = L.map(
+                "map_1466267075f8f8959568e3e451a0e740",
+                {
+                    center: [31.2490997314, -82.3955001831],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_1466267075f8f8959568e3e451a0e740);
+
+            
+
+        
+    
+            var tile_layer_3af32a59942f28978941a57b0e564061 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1466267075f8f8959568e3e451a0e740);
+        
+    
+            var marker_627a0a40b50e5286af54a7bdee7b0673 = L.marker(
+                [31.2490997314, -82.3955001831],
+                {}
+            ).addTo(map_1466267075f8f8959568e3e451a0e740);
+        
+    
+            var icon_ad24f463b92165ab5ca4896c7670a143 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_627a0a40b50e5286af54a7bdee7b0673.setIcon(icon_ad24f463b92165ab5ca4896c7670a143);
+        
+    
+        var popup_5f78a7168d5af913e0b2bc7cecc5dfa5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_406c3dd867d0277c89cd579738694f3e = $(`<div id="html_406c3dd867d0277c89cd579738694f3e" style="width: 100.0%; height: 100.0%;">AYS</div>`)[0];
+            popup_5f78a7168d5af913e0b2bc7cecc5dfa5.setContent(html_406c3dd867d0277c89cd579738694f3e);
+        
+
+        marker_627a0a40b50e5286af54a7bdee7b0673.bindPopup(popup_5f78a7168d5af913e0b2bc7cecc5dfa5)
+        ;
+
+        
+    
+    
+            var marker_e09211f3f2597482b6d27c5cc8c13833 = L.marker(
+                [31.5358, -82.5067],
+                {}
+            ).addTo(map_1466267075f8f8959568e3e451a0e740);
+        
+    
+            var icon_c7b5146cee41b4307abc576a2b4f3423 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e09211f3f2597482b6d27c5cc8c13833.setIcon(icon_c7b5146cee41b4307abc576a2b4f3423);
+        
+    
+        var popup_cc0499f55ac12609f89d92c6e12ed4f3 = L.popup({"maxWidth": 1000});
+
+        
+            var html_0358e93ef40d197a57292ee873afbe51 = $(`<div id="html_0358e93ef40d197a57292ee873afbe51" style="width: 100.0%; height: 100.0%;">                 <style>                 h3 {text-align: center;}                 p {text-align: center;}                 </style>                 <h3>USW00013870</h3>                 <hr>                 <p>Name: <b>ALMA BACON CO AP</b>                 <br>Distance: <b>20.87 mi</b></p>                 <hr>                 <p>                 Monthly Low Temps 2016-2020:<table border="1" class="dataframe">   <thead>     <tr style="text-align: justify-all;">       <th>Jan</th>       <th>Feb</th>       <th>Mar</th>       <th>Apr</th>       <th>May</th>       <th>Jun</th>       <th>Jul</th>       <th>Aug</th>       <th>Sep</th>       <th>Oct</th>       <th>Nov</th>       <th>Dec</th>     </tr>   </thead>   <tbody>     <tr>       <td>39.3</td>       <td>42.2</td>       <td>47.6</td>       <td>53.8</td>       <td>61.7</td>       <td>69.4</td>       <td>71.7</td>       <td>72.2</td>       <td>67.4</td>       <td>57.1</td>       <td>45.8</td>       <td>43.4</td>     </tr>   </tbody> </table>                 </p>                 </div>`)[0];
+            popup_cc0499f55ac12609f89d92c6e12ed4f3.setContent(html_0358e93ef40d197a57292ee873afbe51);
+        
+
+        marker_e09211f3f2597482b6d27c5cc8c13833.bindPopup(popup_cc0499f55ac12609f89d92c6e12ed4f3)
+        ;
+
+        
+    
+    
+            var marker_7a7698608a360c458781528954dace45 = L.marker(
+                [31.2739, -81.9197],
+                {}
+            ).addTo(map_1466267075f8f8959568e3e451a0e740);
+        
+    
+            var icon_87443a597758159a476891ade3069443 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7a7698608a360c458781528954dace45.setIcon(icon_87443a597758159a476891ade3069443);
+        
+    
+        var popup_5d94b23689c778dac6bd5a647b800663 = L.popup({"maxWidth": 1000});
+
+        
+            var html_327f3408eba8f757cfd15c1b93c55504 = $(`<div id="html_327f3408eba8f757cfd15c1b93c55504" style="width: 100.0%; height: 100.0%;">                 <style>                 h3 {text-align: center;}                 p {text-align: center;}                 </style>                 <h3>USC00096219</h3>                 <hr>                 <p>Name: <b>NAHUNTA 6NE</b>                 <br>Distance: <b>28.15 mi</b></p>                 <hr>                 <p>                 Monthly Low Temps 2016-2020:<table border="1" class="dataframe">   <thead>     <tr style="text-align: justify-all;">       <th>Jan</th>       <th>Feb</th>       <th>Mar</th>       <th>Apr</th>       <th>May</th>       <th>Jun</th>       <th>Jul</th>       <th>Aug</th>       <th>Sep</th>       <th>Oct</th>       <th>Nov</th>       <th>Dec</th>     </tr>   </thead>   <tbody>     <tr>       <td>36.6</td>       <td>38.8</td>       <td>43.7</td>       <td>49.5</td>       <td>57.5</td>       <td>66.2</td>       <td>69.0</td>       <td>69.9</td>       <td>65.6</td>       <td>54.6</td>       <td>43.0</td>       <td>40.7</td>     </tr>   </tbody> </table>                 </p>                 </div>`)[0];
+            popup_5d94b23689c778dac6bd5a647b800663.setContent(html_327f3408eba8f757cfd15c1b93c55504);
+        
+
+        marker_7a7698608a360c458781528954dace45.bindPopup(popup_5d94b23689c778dac6bd5a647b800663)
+        ;
+
+        
+    
+    
+            var marker_c7bd6f817133a05806221712f4acf629 = L.marker(
+                [30.8264, -82.3606],
+                {}
+            ).addTo(map_1466267075f8f8959568e3e451a0e740);
+        
+    
+            var icon_9f43c38c69e67a260d499f7e89f5c663 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c7bd6f817133a05806221712f4acf629.setIcon(icon_9f43c38c69e67a260d499f7e89f5c663);
+        
+    
+        var popup_4352910566e7612f36c0e846e25309de = L.popup({"maxWidth": 1000});
+
+        
+            var html_535939cbefeff6b03ca4b3e56a543b57 = $(`<div id="html_535939cbefeff6b03ca4b3e56a543b57" style="width: 100.0%; height: 100.0%;">                 <style>                 h3 {text-align: center;}                 p {text-align: center;}                 </style>                 <h3>USC00093325</h3>                 <hr>                 <p>Name: <b>FARGO 17 NE</b>                 <br>Distance: <b>29.28 mi</b></p>                 <hr>                 <p>                 Monthly Low Temps 2016-2020:<table border="1" class="dataframe">   <thead>     <tr style="text-align: justify-all;">       <th>Jan</th>       <th>Feb</th>       <th>Mar</th>       <th>Apr</th>       <th>May</th>       <th>Jun</th>       <th>Jul</th>       <th>Aug</th>       <th>Sep</th>       <th>Oct</th>       <th>Nov</th>       <th>Dec</th>     </tr>   </thead>   <tbody>     <tr>       <td>40.7</td>       <td>44.2</td>       <td>49.3</td>       <td>55.4</td>       <td>62.4</td>       <td>69.6</td>       <td>71.7</td>       <td>72.3</td>       <td>69.1</td>       <td>59.8</td>       <td>47.9</td>       <td>45.0</td>     </tr>   </tbody> </table>                 </p>                 </div>`)[0];
+            popup_4352910566e7612f36c0e846e25309de.setContent(html_535939cbefeff6b03ca4b3e56a543b57);
+        
+
+        marker_c7bd6f817133a05806221712f4acf629.bindPopup(popup_4352910566e7612f36c0e846e25309de)
+        ;
+
+        
+    
+    
+            var marker_f94418d09904b7928b7c28d711aaca3a = L.marker(
+                [30.74, -82.1278],
+                {}
+            ).addTo(map_1466267075f8f8959568e3e451a0e740);
+        
+    
+            var icon_56e6eb44aed802c338e0fb1f0c2f032d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f94418d09904b7928b7c28d711aaca3a.setIcon(icon_56e6eb44aed802c338e0fb1f0c2f032d);
+        
+    
+        var popup_4ba4952168b602823f4445e9f45f2e92 = L.popup({"maxWidth": 1000});
+
+        
+            var html_a5db28e5072fcb8d4ca502ac3c7f02c9 = $(`<div id="html_a5db28e5072fcb8d4ca502ac3c7f02c9" style="width: 100.0%; height: 100.0%;">                 <style>                 h3 {text-align: center;}                 p {text-align: center;}                 </style>                 <h3>USC00093465</h3>                 <hr>                 <p>Name: <b>FOLKSTON 9 SW</b>                 <br>Distance: <b>38.58 mi</b></p>                 <hr>                 <p>                 Monthly Low Temps 2016-2020:<table border="1" class="dataframe">   <thead>     <tr style="text-align: justify-all;">       <th>Jan</th>       <th>Feb</th>       <th>Mar</th>       <th>Apr</th>       <th>May</th>       <th>Jun</th>       <th>Jul</th>       <th>Aug</th>       <th>Sep</th>       <th>Oct</th>       <th>Nov</th>       <th>Dec</th>     </tr>   </thead>   <tbody>     <tr>       <td>44.2</td>       <td>46.9</td>       <td>51.2</td>       <td>57.7</td>       <td>64.0</td>       <td>70.8</td>       <td>72.8</td>       <td>73.5</td>       <td>70.1</td>       <td>61.8</td>       <td>51.3</td>       <td>48.5</td>     </tr>   </tbody> </table>                 </p>                 </div>`)[0];
+            popup_4ba4952168b602823f4445e9f45f2e92.setContent(html_a5db28e5072fcb8d4ca502ac3c7f02c9);
+        
+
+        marker_f94418d09904b7928b7c28d711aaca3a.bindPopup(popup_4ba4952168b602823f4445e9f45f2e92)
+        ;
+
+        
+    
+    
+            var marker_d73261715ca4fc97fb1e9e50aa981d54 = L.marker(
+                [31.8414, -82.3756],
+                {}
+            ).addTo(map_1466267075f8f8959568e3e451a0e740);
+        
+    
+            var icon_68e4382c630a01fc421968b02bdef719 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d73261715ca4fc97fb1e9e50aa981d54.setIcon(icon_68e4382c630a01fc421968b02bdef719);
+        
+    
+        var popup_67d70be4b6782e182f1f08d59138504c = L.popup({"maxWidth": 1000});
+
+        
+            var html_be9a96355c5ecd8d4b1c7d1be5e4422f = $(`<div id="html_be9a96355c5ecd8d4b1c7d1be5e4422f" style="width: 100.0%; height: 100.0%;">                 <style>                 h3 {text-align: center;}                 p {text-align: center;}                 </style>                 <h3>USC00090670</h3>                 <hr>                 <p>Name: <b>BAXLEY 5NNW</b>                 <br>Distance: <b>40.94 mi</b></p>                 <hr>                 <p>                 Monthly Low Temps 2016-2020:<table border="1" class="dataframe">   <thead>     <tr style="text-align: justify-all;">       <th>Jan</th>       <th>Feb</th>       <th>Mar</th>       <th>Apr</th>       <th>May</th>       <th>Jun</th>       <th>Jul</th>       <th>Aug</th>       <th>Sep</th>       <th>Oct</th>       <th>Nov</th>       <th>Dec</th>     </tr>   </thead>   <tbody>     <tr>       <td>37.5</td>       <td>40.4</td>       <td>45.3</td>       <td>52.6</td>       <td>60.9</td>       <td>68.4</td>       <td>70.6</td>       <td>71.1</td>       <td>66.4</td>       <td>55.3</td>       <td>44.2</td>       <td>42.2</td>     </tr>   </tbody> </table>                 </p>                 </div>`)[0];
+            popup_67d70be4b6782e182f1f08d59138504c.setContent(html_be9a96355c5ecd8d4b1c7d1be5e4422f);
+        
+
+        marker_d73261715ca4fc97fb1e9e50aa981d54.bindPopup(popup_67d70be4b6782e182f1f08d59138504c)
+        ;
+
+        
+    
+    
+            var tile_layer_bc99cb4638087f0597cea1e8aa44f9d1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_49e54fbd7810ad6ea17bdba0583a6354 = new L.Control.MiniMap(
+                tile_layer_bc99cb4638087f0597cea1e8aa44f9d1,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_1466267075f8f8959568e3e451a0e740.addControl(mini_map_49e54fbd7810ad6ea17bdba0583a6354);
+        
 </script>
