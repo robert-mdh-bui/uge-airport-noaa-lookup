@@ -1,4 +1,4 @@
-US Airport to 5 Nearest NOAA Weather Stations [Web App](https://uge-airport-noaa-lookup.herokuapp.com/)
+Mapping US Airport to NOAA Weather Data [Web App](https://uge-airport-noaa-lookup.herokuapp.com/)
 ================
 Robert Duc Bui
 2022-07-18
