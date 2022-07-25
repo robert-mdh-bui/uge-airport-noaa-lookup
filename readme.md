@@ -89,7 +89,7 @@ variables:
 
 -   Station coordinates (longitude/latitude)
 
-<!-- -->
+``` python
 
     ###
     # Reading publicly-available airport metadata
@@ -114,6 +114,8 @@ variables:
       .merge(ghcnd_metadata,
              on = "id",
              how = 'left')
+             
+```
 
 ## Step 2: Finding nearest weather station to each airport
 
@@ -160,6 +162,8 @@ matrix of all possible combinations of one IATA airport code and one
 NOAA weather station. We can derive the pairwise distances, and save
 this matrix for archival purposes.
 
+``` python
+
     # Calculating pairwise distances (haversine - not taking altitude into account)
     distances = pd.DataFrame(haversine_vector(airports.zipped.tolist(),df_stations.zipped.tolist(),Unit.MILES, comb=True))
     distances.columns = airports.iata.tolist()
@@ -168,6 +172,8 @@ this matrix for archival purposes.
     distances.to_pickle('distances.pkl')
     airports.to_pickle('airports.pkl')
     df_stations.to_pickle('df_stations.pkl')
+
+```
 
 ## Step 3: Pre-Rendering Maps for All Airports
 
@@ -181,6 +187,8 @@ station is most representative of climate and weather conditions, as we
 can visually check for differences in altitude, or the presence of
 geological features that can affect local climate conditions. Here we
 use the open-source `Stamen Terrain` tileset.
+
+``` python
 
     # Finding nearest 5 NOAA stations to input airport
     # Working example here is ORD - O'Hare International
@@ -234,6 +242,8 @@ use the open-source `Stamen Terrain` tileset.
 
     draw_top5_map("ORD")
 
+```
+
 ![Example:
 ORD](https://github.com/robert-mdh-bui/uge-airport-noaa-lookup/blob/main/assets/ORD_screenshot.png?raw=true)
 
@@ -242,6 +252,7 @@ airport with an IATA code in the US and save all `html` files to the
 `asset` folder, which will in turn be rendered in the `dash` app as an
 `iframe`.
 
+``` python 
     # Pre-rendering all airports' top-5 map
     for x in range(0, len(airports)):
         inputx = str(airports.iloc[x]['iata'])
@@ -249,6 +260,8 @@ airport with an IATA code in the US and save all `html` files to the
 
         map_obj = draw_top5_map(inputx)
         map_obj.save(filename)
+
+```
 
 ## Step 4: `Dash` Application & Deployment
 
