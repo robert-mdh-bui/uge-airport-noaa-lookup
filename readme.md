@@ -24,7 +24,7 @@ Python packages:
 -   `folium`: Python wrapper for `leaflet` to create interactive GIS
     maps.
 
-<!-- -->
+``` python
 
     import pandas as pd
     import airportsdata as ad
@@ -39,6 +39,8 @@ Python packages:
 
     import folium
     from folium import plugins
+
+```
 
 # Data Sources
 
