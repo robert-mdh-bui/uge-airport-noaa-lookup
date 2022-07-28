@@ -31,8 +31,8 @@ app.layout = html.Div(
         ),
         dcc.Markdown(
             children='''
-            This web app is derived from a project originally created for [United Ground Express](https://unitedgroundexpress.com/) \
-            winter operations planning.
+            This web app is derived from a project originally created for winter operations planning at \
+            a major US legacy airline.
             ''',
             style={
                 'display': 'flex',
