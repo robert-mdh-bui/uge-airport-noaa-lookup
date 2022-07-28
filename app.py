@@ -106,7 +106,7 @@ app.layout = html.Div(
                 ),
                 dcc.Markdown(
                     children='''
-                    No information proprietary to United Airlines, United Ground Express, or affiliates has been used in this app.
+                    No proprietary information or data has been used in this app.
                     ''',
                     style={
                         'display': 'flex',
